@@ -2,13 +2,13 @@
 Material for the advanced physical design workshop
 
 # Table of Contents
-  - [Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#day-1)
-  - [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](#day-2)
-  - [Day 3 - Design library cell using Magic Layout and ngspice characterization](#day-3)
-  - [Day 4 - Pre-layout timing analysis and importance of good clock tree](#day-4)
-  - [Day 5 - Final steps for RTL2GDS](#day-5)
+  - [Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#1st_Day)
+  - [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](#2nd_Day)
+  - [Day 3 - Design library cell using Magic Layout and ngspice characterization](#3rd_Day)
+  - [Day 4 - Pre-layout timing analysis and importance of good clock tree](#4th_Day)
+  - [Day 5 - Final steps for RTL2GDS](#5th_Day)
 
-# 1st Day
+#1st_Day
 ## PDKs and Libraries
 First, we look for the PDKs:
 <img src="Screenshots/1_PdkCheck.png">
@@ -35,11 +35,61 @@ Running Synthesis:
 Checking Synthesis reports:
 <img src="Screenshots/1_SynthesisCheck.png">
 
+
 You can see some statistics related to the design
+
 <img src="Screenshots/1_Picorv32aStatistics.png">
 <img src="Screenshots/1_Picorv32aStatisticsCont.png">
 <img src="Screenshots/1_PrintingStatistics.png">
+For the Flip flop ratio: FFr = 1613/14876 = 10.85%
 
-# 2nd Day
+#2nd_Day
+## Floorplanning in our project 
+Checking the variables used in this stage:
+<img src="Screenshots/2_VarINFO.png">
 
+floorplan.tcl:
+<img src="Screenshots/2_floorplandDOTtcl.png">
 
+config.tcl:
+<img src="Screenshots/2_configtcl.png">
+
+Running floorplan:
+<img src="Screenshots/2_floorplanEnd.png">
+
+Checking in logs folder:
+<img src="Screenshots/2_floorplanLog.png">
+<img src="Screenshots/2_ioPlacer.png">
+
+Checking .def file:
+<img src="Screenshots/2_ioPlacer.png">
+
+Then, we open Magic:
+<img src="Screenshots/2_OpenMAGIC.png">
+<img src="Screenshots/2_TryingMagic.png">
+
+##Placement:
+
+We continue with Placement
+<img src="Screenshots/2_Placement.png">
+
+And the new layout:
+<img src="Screenshots/2_LayoutPlacement.png">
+<img src="Screenshots/2_InternalStructureLayout.png">
+
+#3rd_day
+##Clonning git
+First, we clone this repository https://github.com/nickson-jose/vsdstdcelldesign.git
+<img src="Screenshots/3_ClonningGit.png">
+
+Opening the inverter layout:
+<img src="Screenshots/3_InverterLayout.png">
+
+Checking the layout:
+<img src="Screenshots/3_CheckLayoutInverter.png">
+
+Generating a DRC error:
+<img src="Screenshots/3_LayoutDRCError.png">
+
+Extracting to spice:
+<img src="Screenshots/3_OriginalSpice.png">
