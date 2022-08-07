@@ -49,31 +49,39 @@ Checking the variables used in this stage:
 <img src="Screenshots/2_VarINFO.png">
 
 floorplan.tcl:
+
 <img src="Screenshots/2_floorplandDOTtcl.png">
 
 config.tcl:
+
 <img src="Screenshots/2_configtcl.png">
 
 Running floorplan:
+
 <img src="Screenshots/2_floorplanEnd.png">
 
 Checking in logs folder:
+
 <img src="Screenshots/2_floorplanLog.png">
 <img src="Screenshots/2_ioPlacer.png">
 
 Checking .def file:
+
 <img src="Screenshots/2_ioPlacer.png">
 
 Then, we open Magic:
+
 <img src="Screenshots/2_OpenMAGIC.png">
 <img src="Screenshots/2_TryingMagic.png">
 
 ## Placement:
 
 We continue with Placement
+
 <img src="Screenshots/2_Placement.png">
 
 And the new layout:
+
 <img src="Screenshots/2_LayoutPlacement.png">
 <img src="Screenshots/2_InternalStructureLayout.png">
 
@@ -81,54 +89,69 @@ And the new layout:
 
 ## Clonning git
 First, we clone this repository https://github.com/nickson-jose/vsdstdcelldesign.git
+
 <img src="Screenshots/3_ClonningGit.png">
 
 
 Opening the inverter layout:
+
 <img src="Screenshots/3_InverterLayout.png">
 
 
 Checking the layout:
+
 <img src="Screenshots/3_CheckLayoutInverter.png">
 
 
 Generating a DRC error:
+
 <img src="Screenshots/3_LayoutDRCError.png">
 
 ## Spice
 Extracting to spice:
+
 <img src="Screenshots/3_OriginalSpice.png">
 
 Editing this document:
+
 <img src="Screenshots/3_NewSpice.png">
 
 Running simulation with _nspice_:
+
 <img src="Screenshots/3_SpiceSimulation.png">
 
 Calculating rise, fall and propagation delay:
+
 <img src="Screenshots/3_FallTime.png">
 <img src="Screenshots/3_RiseTime.png">
 <img src="Screenshots/3_PropagationDelay.png">
+
 
 trise = 0.1356 ns
 tfall = 0.0508 ns
 PropDelay = 0.0606 ns
 
+
 #4th Day
 ## Export to .lef
 We edit and generate a .lef file from the last inverter:
+
 <img src="Screenshots/4_SlightlyEditedLayout.png">
 <img src="Screenshots/4_GeneratingLEF.png">
 <img src="Screenshots/4_LefFIle.png">
 
 To use them, we have to edit the config.tcl
+
 <img src="Screenshots/4_EditConfigtcl.png">
 
 ## Reruning synthesis 
+
 <img src="Screenshots/4_RunningSynthesisaAfter1000attemps.png">
 <img src="Screenshots/4_extraoptionsafterSynthesis.png">
 <img src="Screenshots/4_NewSynthesis.png">
 <img src="Screenshots/4_NewAreaAfterSynthesis.png">
 
+
 Trying to improve timing:
+
 <img src="Screenshots/4_Morestrategies.png">
